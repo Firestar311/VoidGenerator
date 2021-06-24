@@ -1,4 +1,4 @@
-package com.starmediadev.voidgenerator;
+package com.starmediadev.plugins.voidgenerator;
 
 import org.bukkit.Location;
 import org.bukkit.World;

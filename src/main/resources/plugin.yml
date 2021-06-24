@@ -1,4 +1,4 @@
-main: com.starmediadev.voidgenerator.VoidGeneratorPlugin
+main: com.starmediadev.plugins.voidgenerator.VoidGeneratorPlugin
 name: VoidGenerator
 version: ${project.version}
 api-version: 1.17
