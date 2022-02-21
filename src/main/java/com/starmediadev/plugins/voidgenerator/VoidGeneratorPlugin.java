@@ -17,10 +17,12 @@ public class VoidGeneratorPlugin extends JavaPlugin implements Listener {
     
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
-        var world = Bukkit.getWorld("world");
-        var block = world.getBlockAt(0, 60, 0);
-        block.setType(Material.BEDROCK);
-        e.getPlayer().teleport(new Location(world, 0, 61, 0));
+        if (Bukkit.getPluginManager().getPlugin("StarEssentials") == null) {
+            var world = Bukkit.getWorld("world");
+            var block = world.getBlockAt(0, 60, 0);
+            block.setType(Material.BEDROCK);
+            e.getPlayer().teleport(new Location(world, 0, 61, 0));
+        }
     }
 
     public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
