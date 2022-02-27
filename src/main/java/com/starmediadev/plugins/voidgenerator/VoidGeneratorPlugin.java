@@ -27,5 +27,6 @@ public class VoidGeneratorPlugin extends JavaPlugin implements Listener {
 
     public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
         return new VoidChunkGenerator();
+        //return new WaterChunkGenerator();
     }
 }
