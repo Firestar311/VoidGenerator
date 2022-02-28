@@ -1,10 +1,8 @@
 package com.starmediadev.plugins.voidgenerator;
 
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.generator.BiomeProvider;
-import org.bukkit.generator.BlockPopulator;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.generator.WorldInfo;
 
@@ -48,24 +46,8 @@ public class WaterChunkGenerator extends ChunkGenerator {
         return false;
     }
     
-    //    @Override
-//    public ChunkData generateChunkData(World world, Random random, int x, int z, BiomeGrid biome) {
-//        ChunkData chunkData = createChunkData(world);
-//        System.out.println("generate chunkdata");
-//        for (int i = -63; i < 321; i++) {
-//            chunkData.setBlock(x, i, z, Material.WATER);
-//        }
-//    
-//        return chunkData;
-//    }
-    
     @Override
     public boolean shouldGenerateSurface() {
         return true;
-    }
-    
-    @Override
-    public List<BlockPopulator> getDefaultPopulators(World world) {
-        return super.getDefaultPopulators(world);
     }
 }

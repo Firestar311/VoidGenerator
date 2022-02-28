@@ -5,6 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,6 +24,11 @@ public class VoidGeneratorPlugin extends JavaPlugin implements Listener {
             block.setType(Material.BEDROCK);
             e.getPlayer().teleport(new Location(world, 0, 61, 0));
         }
+    }
+    
+    @EventHandler
+    public void onEntitySpawn(EntitySpawnEvent e) {
+        //e.setCancelled(true);
     }
 
     public ChunkGenerator getDefaultWorldGenerator(String worldName, String id) {
