@@ -2,5 +2,5 @@ main: com.starmediadev.plugins.voidgenerator.VoidGeneratorPlugin
 name: ${project.name}
 version: ${project.version}
 description: ${project.description}
-api-version: 1.17
+api-version: 1.18
 load: STARTUP
